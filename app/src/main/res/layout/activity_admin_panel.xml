@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/light_gradient"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:context=".AdminPanelActivity">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Admin Panel"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintTop_toBottomOf="@id/titleTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addProductButton"
+            android:layout_width="0dp"
+            android:backgroundTint="@color/orange"
+            android:layout_height="wrap_content"
+            android:text="Add Product"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:icon="@android:drawable/ic_input_add"
+            app:iconGravity="textStart"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp"
+            android:padding="16dp"
+            android:contentDescription="Add a new product"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/viewProductListButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="View Product List"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/orange"
+            app:icon="@android:drawable/ic_menu_view"
+            app:iconGravity="textStart"
+            app:layout_constraintTop_toBottomOf="@id/addProductButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:contentDescription="View list of products"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/orderDetailsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/orange"
+            android:text="Order Details"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:icon="@android:drawable/ic_menu_sort_by_size"
+            app:iconGravity="textStart"
+            app:layout_constraintTop_toBottomOf="@id/viewProductListButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:contentDescription="View order details"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
